@@ -1,22 +1,30 @@
 import java.util.Scanner;
-public class FixDebugSix2 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int num, denom, result;
-        
-        try {
-            System.out.print("Enter numerator >> ");
-            num = input.nextInt();
-            System.out.print("Enter denominator >> ");
-            denom = input.nextInt();
-            result = num / denom;
-            System.out.println(num + " / " + denom + " = " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("Division by zero error");
-        } catch (Exception e) {
-            System.out.println("Invalid input");
-        } finally {
-            input.close();
-        }
-    }
+
+public class DebugSix2 {
+   public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      char letter;
+      int a;
+      final int MAX = 122;
+      final int NUMBERLINE = 20;
+      int lines = 0;
+      int min;
+
+      System.out.println("Enter a Unicode value to start.");
+      System.out.print("For example, A is 65 >> ");
+      min = keyboard.nextInt();
+
+      for(a = min; a <= MAX; a++) {
+         letter = (char)a;
+         System.out.print("  " + letter);
+         lines++;
+
+         if(lines == NUMBERLINE) {
+            lines = 0;
+            System.out.println();
+         }
+      }
+
+      System.out.println("\nEnd of application");
+   }
 }
