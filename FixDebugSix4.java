@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DebugSix4 {
+public class FixDebugSix4 {
    public static void main(String[] args) {
       int high, low;
       int howManyBetween;
