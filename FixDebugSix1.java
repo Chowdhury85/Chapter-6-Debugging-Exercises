@@ -1,22 +1,19 @@
-import java.io.*;
-public class FixDebugSix1 {
-    public static void main(String[] args) {
-        try {
-            FileWriter fw = new FileWriter("debugSix1.txt");
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write("This is a test file");
-            bw.newLine();
-            bw.write("For debugging purposes");
-            bw.close();
-            
-            BufferedReader br = new BufferedReader(new FileReader("debugSix1.txt"));
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-            br.close();
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
+import java.util.Scanner;
+
+public class DebugSix1 {
+   public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      int days;
+      double money = 0.01;
+      int day = 1;
+
+      System.out.print("Enter number of days >> ");
+      days = keyboard.nextInt();
+
+      while(day <= days) {
+         System.out.println("After day " + day + " you have $" + money);
+         money = 2 * money;
+         ++day;
+      }
+   }
 }
