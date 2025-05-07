@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DebugSix1 {
+public class FixDebugSix1 {
    public static void main(String[] args) {
       Scanner keyboard = new Scanner(System.in);
       int days;
