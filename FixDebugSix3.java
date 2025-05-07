@@ -1,13 +1,30 @@
-public class FixDebugSix3 {
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int total = 0;
-        
-        for (int i = 0; i < numbers.length; i++) {
-            total += numbers[i];
-        }
-        
-        System.out.println("The total is " + total);
-        System.out.println("The average is " + (double)total / numbers.length);
-    }
+import java.util.Scanner;
+
+public class DebugSix3 {
+   public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      int userNum, val;
+      final int MIN = 1;
+      final int MAX = 20;
+      final int TIME_WASTER = 100000;
+
+      System.out.print("Enter a number between " + MIN + " and " + MAX + " >> ");
+      userNum = keyboard.nextInt();
+
+      while(userNum < MIN || userNum > MAX) {
+         System.out.println("Number out of range");
+         System.out.print("Enter a number between " + MIN + " and " + MAX + " inclusive >> ");
+         userNum = keyboard.nextInt();
+      }
+
+      for(val = userNum; val > 0; --val) {
+         System.out.print(val + "  ");
+
+         for(int x = 0; x < TIME_WASTER; ++x)
+            for(int y = 0; y < TIME_WASTER; ++y)
+               ; // Do-nothing loop to waste time
+      }
+
+      System.out.println("\nBlastoff!");
+   }
 }
