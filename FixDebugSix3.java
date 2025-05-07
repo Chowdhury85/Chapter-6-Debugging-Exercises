@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DebugSix3 {
+public class FixDebugSix3 {
    public static void main(String[] args) {
       Scanner keyboard = new Scanner(System.in);
       int userNum, val;
